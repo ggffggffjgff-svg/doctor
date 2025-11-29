@@ -56,19 +56,20 @@ function pill_constructor(){
 }
 
 function game_constructor(){
+var src = "https://github.com/ggffggffjgff-svg/doctor/blob/main/"
 this.canvas = document.createElement('canvas');
 this.canvas.addEventListener('mousedown', mousedown, false);
 this.canvas.addEventListener('touchstart', startTouch, false);
 this.canvas.addEventListener('touchend', stopTouch, false);
 this.canvas.style = "background-color: #444444; position: absolute;";
 this.nonote = document.createElement('img');
-this.nonote.src = "img/nonote.png" + version;
+this.nonote.src = src + "img/nonote.png" + version;
 this.controlimg = document.createElement('img');
-this.controlimg.src = "img/control.png" + version;
+this.controlimg.src = src + "img/control.png" + version;
 this.item = document.createElement('img');
-this.item.src = "img/item.png" + version;
+this.item.src = src + "img/item.png" + version;
 this.topimg = document.createElement('img');
-this.topimg.src = "img/top.png" + version;
+this.topimg.src = src + "img/top.png" + version;
 this.player = document.createElement("audio");
 this.level = 0;
 this.virus = 0;
@@ -86,7 +87,7 @@ for (var i = 0; i < 8; i++){
 this.soundOn = 0;
 this.sound = [];
 for (var i = 1; i < 4; i++){
-  this.sound[i] = "sound/00" + i + ".mp3" + version;
+  this.sound[i] = src + "sound/00" + i + ".mp3" + version;
 }
 this.zoom_timer = 0;
 this.timer = 0;
